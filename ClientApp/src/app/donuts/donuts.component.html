@@ -1,0 +1,13 @@
+<h2><a routerLink=''>Return Home</a></h2>
+<h2><a routerLink="/famous-people">Go To Famous People</a></h2>
+
+<br><br>
+
+<div *ngFor="let d of donuts; let i = index">
+    <p>{{i+1}}) Name: <a routerLink="/donut-detail/{{i+1}}">{{d.resultsName}}</a></p> 
+    <br>
+</div>
+
+<router-outlet></router-outlet>
+
+
