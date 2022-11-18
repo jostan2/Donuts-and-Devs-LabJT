@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
@@ -15,6 +16,9 @@ import { DonutDetailComponent } from './donut-detail/donut-detail.component';
 
 import { FamousPeopleComponent } from './famous-people/famous-people.component';
 import { FamousPeopleDetailComponent } from './famous-people-detail/famous-people-detail.component';
+
+// //ng add @angular/material
+// import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [

@@ -2,6 +2,36 @@
 <h2><a routerLink="/donuts">Go To Donuts</a></h2>
 
 <br><br>
+
+<div *ngFor="let d of persons; let i = index">
+    <p>{{i+1}}) Name: <a routerLink="/famous-people-detail/{{i+1}}">{{d.completeFirstName}} {{d.completeLastName}}</a></p> 
+    <br>
+</div>
+
+
+<router-outlet></router-outlet>
+
+<!-- 
+<div class="row">
+    <div class="card-header text-white" [class]="accordionColor">
+        <div class="row">
+            <div class="col-6">
+                {{headerText}};
+            </div>
+            <div class="col-6 text-end">
+                <i *ngIf="isAccordionOpen" class="fa fa-angle-down" (click)="isAccordionOpen = false" aria-hidden="true" ></i>
+                <i *ngIf="!isAccordionOpen" class="fa fa-angle-up" (click)="isAccordionOpen = true" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <div class="card-body" *ngIf="isAccordionOpen">
+        <ng-container >
+            <ng-content></ng-content>
+        </ng-container>
+        
+    </div>
+</div> -->
+
 <!-- 
       <sprk-accordion>
         <sprk-accordion-item
@@ -44,4 +74,3 @@
         </sprk-accordion-item>
       </sprk-accordion> -->
 
-<!-- <router-outlet></router-outlet> -->

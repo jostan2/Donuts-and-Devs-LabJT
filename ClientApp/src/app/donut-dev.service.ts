@@ -34,6 +34,7 @@ export class DonutDevService {
   }
 
   getOnePerson(id:number): Observable<CSHallOfFame> {
+    console.log(id);
     return this.http.get<CSHallOfFame>(this.baseURL + "api/computersciencehalloffames/" + id);
   }
 }

@@ -1,6 +1,8 @@
 export interface CSHallOfFame {
-    firstName:  string;
-    lastName:   string;
-    innovation: string;
-    year:       number;
+    id:                 number;
+    completeFirstName:  string;
+    completeLastName:   string;
+    completeInnovation: string;
+    completeYear:       number;
+    
 }

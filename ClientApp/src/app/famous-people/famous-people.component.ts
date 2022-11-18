@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DonutDevService } from '../donut-dev.service';
 import { CSHallOfFame } from '../Interface/cshall-of-fame';
 
@@ -10,6 +10,10 @@ import { CSHallOfFame } from '../Interface/cshall-of-fame';
 export class FamousPeopleComponent implements OnInit {
 
   persons:CSHallOfFame[] = [];
+
+  // @Input() headerText : string = 'Famous People';
+  // @Input() accordionColor : string = '';
+  // isAccordionOpen: boolean =  true;
 
   constructor(private peopleDb:DonutDevService) {
     this.getPersonList()
@@ -23,6 +27,9 @@ export class FamousPeopleComponent implements OnInit {
     this.peopleDb.getPersonList().subscribe(
     (results:CSHallOfFame[]) => {
       this.persons = results;
+      // console.log(results)
     })
   }
 }
+
+//https://sparkdesignsystem.com/installing-spark/angular/
